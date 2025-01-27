@@ -118,6 +118,7 @@ namespace Extrator_de_Geolocalização_de_Imagem
                             //Positioning Method
                             case 27:
                                 fileData.GPSProcessingMethod = Encoding.ASCII.GetString(prop.Value);
+                                fileData.GPSProcessingMethod = fileData.GPSProcessingMethod.Substring(1, fileData.GPSProcessingMethod.Length - 1); //remove o '\0' no final da String
                                 break;
                         }
                     }
